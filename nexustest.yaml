@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nexus-test-pod
+  namespace: shlee
+  labels:
+    app: nexus-test
+spec:
+  containers:
+  - name: nexus-test-container
+    image: sihyunglee823/nexustest:v7
+    imagePullPolicy: IfNotPresent
+    volumeMounts:
+    - name: jar-dir
+      mountPath: /jarfile
+    ports:
+    - containerPort: 8080
+  volumes:
+  - name: jar-dir
+    emptyDir: {}
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nexus-test-svc
+  namespace: shlee
+  labels:
+    app: nexus-test
+spec:
+  selector:
+    app: nexus-test
+  type: NodePort
+  ports:
+  - port: 8080
+    targetPort: 8080
+    protocol: TCP
+
