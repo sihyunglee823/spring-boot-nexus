@@ -3,7 +3,7 @@
 sampleCode 는 간단한 spring-boot 코드 입니다.
 
 <테스트 작업 진행>
-1. sampleCode 를 maven build -> jar 파일로 만든 후 개인 nexus repository 에 배포
+1. sampleCode 를 maven build -> jar 파일로 만든 후 개인 PC 에 연결되어 있는 개인 nexus repository 에 배포
 
 2. 컨테이너 안에서 wget 으로 개인 nexus repository 에 배포한 jar 파일을 다운로드
 <br></br>
