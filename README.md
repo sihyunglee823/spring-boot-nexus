@@ -9,7 +9,6 @@ sampleCode 는 간단한 spring-boot 코드 입니다.
 <br></br>
 wget --user=<계정아이디> --password=<비밀번호> "http://<로컬ip>:8081/repository/maven-3rdparty/com/example/demo/0.0.1-SNAPSHOT/demo-0.0.1-SNAPSHOT.jar" -O /root/demo-0.0.1-SNAPSHOT.jar
 
-3. jar 파일 실행 
-*** java -jar demo-0.0.1-SNAPSHOT.jar
+3. jar 파일 실행 : java -jar demo-0.0.1-SNAPSHOT.jar
 
 4. NodePort 로 연결
